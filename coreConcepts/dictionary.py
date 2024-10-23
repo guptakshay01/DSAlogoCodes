@@ -113,3 +113,17 @@ print(all(numberDict))                                  # checks for all the key
 print(any(numberDict))                                  # checks for any key to be True, any one key can be true'
 
 print(sorted(numberDict))                               # return keys in sorted order
+
+
+# Dictionary comprehension
+# Syntex - newDict = {newKey:newValue for item in list}
+
+import random
+
+cityNames = ['Indore', 'Bhopal', 'Ratlam', 'Jhansi', 'Ujjain']
+
+cityTemperature = {city:random.randint(20, 50) for city in cityNames}
+print(cityTemperature)
+
+cityTempAbove35 = { key:val for key,val in cityTemperature.items() if val>35}
+print(cityTempAbove35)
